@@ -1,6 +1,7 @@
 package rikkei.edu.patientservice.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import rikkei.edu.patientservice.service.PatientService;
 @RestController
 @RequestMapping("/api/v1/patients")
 @RequiredArgsConstructor
+@RefreshScope
 public class PatientController {
     private final PatientService patientService;
 
