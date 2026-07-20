@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class WelcomeController {
-    @Value("${app.welcome}")
+    @Value("${app.welcome:Chao mung tam thoi}")
     private String welcomeMsg;
 
     @GetMapping("/welcome")
